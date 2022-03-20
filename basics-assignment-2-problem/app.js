@@ -1,13 +1,16 @@
 const app = Vue.createApp({
   data() {
-    return { userInput: '' };
+    return { userInput: '', confirmedInput: '' };
   },
   methods: {
     showAlert() {
       alert('This works!');
     },
     saveInput(event) {
-      this.userInput = event.target.value
+      this.userInput = event.target.value;
+    },
+    confirmInput() {
+      this.confirmedInput = this.userInput;
     }
   }
 });
