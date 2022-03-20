@@ -15,6 +15,14 @@ const app = Vue.createApp({
       }
     }
   },
+  watch: {
+    result() {
+      const that = this;
+      setTimeout(function() {
+        that.number = 0;
+      }, 5000);
+    }
+  },
   methods: {
     addNumber(num) {
       this.number = this.number + num;
