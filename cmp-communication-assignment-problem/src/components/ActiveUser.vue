@@ -1,10 +1,21 @@
 <template>
   <section>
-    <h2>Maximilian Schwarzmueller</h2>
-    <h3>31 Years</h3>
+    <h2>{{ username }}</h2>
+    <h3>{{ userage }} Years</h3>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    username: {
+      type: String,
+    required: true
+    },
+    userage: {
+      type: Number,
+      required: true
+    }
+  }
+};
 </script>
